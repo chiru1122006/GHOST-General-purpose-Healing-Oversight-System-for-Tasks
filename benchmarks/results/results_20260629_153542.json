@@ -1,0 +1,181 @@
+{
+  "timestamp": "20260629_153542",
+  "num_tasks": 5,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.0,
+    "avg_steps": 4.0,
+    "failure_rate": 1.0
+  },
+  "ghost": {
+    "success_rate": 0.0,
+    "avg_steps": 3.6,
+    "failure_rate": 1.0,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 1
+  },
+  "delta": {
+    "success_rate": 0.0,
+    "avg_steps": -0.4
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 3,
+        "result": "Your order #ORD-123 has been successfully cancelled within the 3\u2011day cancellation window. A full refund of $120.00 has been processed and will appear on your original payment method within 3\u20115 business days. If you have any other questions or need further assistance, please let us know!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 2,
+        "result": "Your order #ORD-123 has been cancelled and a full refund is being processed. The refund should appear in your account within 5\u20117 business days. If you have any further questions, feel free to let us know.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_19944",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 5.83386754989624,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 3,
+        "result": "Alice Smith (ID: US-991) currently has one active order: **ORD-123**.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 5,
+        "result": "Alice Smith (Customer ID: US-991) has one active order:\n\n- **Order ID:** ORD-123  \n- **Placed:** 2 days ago  \n- **Item:** Deluxe Sneakers  \n- **Cost:** $120.00  \n- **Carrier:** FedEx  \n- **Current Status:** Shipped  \n- **Cancellation Eligible:** Yes  \n\nIf you need any further assistance\u2014such as modifying the order, requesting a cancellation (if still eligible), or anything else\u2014please let me know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_19944",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 4,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.05,
+          "duration_seconds": 9.341029405593872,
+          "adherence_history": [
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 10,
+        "result": "Your order **ORD-123** (Deluxe Sneakers) was shipped via **FedEx** two days ago and is currently in \"Shipped\" status. Unfortunately, the specific FedEx tracking number isn\u2019t available in our system at the moment. You can track the shipment by visiting the FedEx website and entering your order number, or you can contact FedEx directly for more details. If you need further assistance, feel free to let us know!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 7,
+        "result": "Your order **ORD-123** was placed two days ago and is currently **Shipped** via **FedEx**. Unfortunately, the tracking number for this shipment isn\u2019t stored in our system at the moment, so we can\u2019t provide a direct tracking link. \n\nYou can locate the tracking number in the shipping confirmation email we sent you, or you can contact FedEx directly with your order details for the most up\u2011to\u2011date tracking information. If you need any further assistance, please let us know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_19944",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 6,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "step_repetition_loop"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 17.445261240005493,
+          "adherence_history": [
+            0.9885513067245484,
+            0.995950174331665,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 2,
+        "result": "The return policy for shoes is currently under review, but the standard 14\u2011day return policy applies in the meantime. If you need to initiate a return within 14 days of purchase, you can follow the usual return process. Let us know if you need any further assistance.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 2,
+        "result": "The return policy for shoes is currently listed as \u201cUnder review,\u201d but the standard 14\u2011day return policy applies. This means you can return shoes within 14 days of purchase under the usual return procedures.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_19944",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.406132698059082,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 2,
+        "result": "Thank you for reaching out. Our return policy for footwear is as follows: you may return the shoes within 30 days of receipt. If the return is made within the first\u202f3\u202fdays after purchase, you\u2019ll receive a full refund. Returns processed after the initial\u202f3\u2011day window are subject to a\u202f15\u202f% restocking fee, which will be deducted from your refund. To start a return, please ensure the shoes are unworn, in their original packaging, and include the return authorization form that was included with your order. If you need any assistance initiating the return, just let us know and we\u2019ll be happy to help!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 2,
+        "result": "Thank you for reaching out. Our return policy for footwear is as follows:\n\n- **If your purchase is less than 3 days old:** You can cancel the order and receive a full refund.\n- **If more than 3 days have passed:** You may still return the shoes, but a 15% restocking fee will be applied to the refund.\n\nTo initiate a return, please contact our support team with your order number, and we\u2019ll guide you through the return process. If you need any further assistance, feel free to let us know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_19944",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.078735113143921,
+          "adherence_history": []
+        }
+      }
+    }
+  ]
+}

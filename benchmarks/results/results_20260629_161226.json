@@ -1,0 +1,186 @@
+{
+  "timestamp": "20260629_161226",
+  "num_tasks": 5,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.8,
+    "avg_steps": 3.4,
+    "failure_rate": 0.2
+  },
+  "ghost": {
+    "success_rate": 0.8,
+    "avg_steps": 4.2,
+    "failure_rate": 0.2,
+    "recovery_success_rate": 1.0,
+    "total_drift_detections": 2
+  },
+  "delta": {
+    "success_rate": 0.0,
+    "avg_steps": 0.8
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 3,
+        "result": "Your order #ORD-123 has been successfully cancelled within the 3\u2011day cancellation window, and a full refund of $120.00 has been processed. You should see the refund reflected in your account within 3\u20135 business days. If you have any further questions or need assistance, feel free to let us know.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 4,
+        "result": "Your order #ORD-123 has been cancelled as requested. Since it was within our 3\u2011day cancellation window, the full amount of $120.00 has been refunded to your original payment method. You should see the refund reflected in your account within a few business days. If you have any further questions or need assistance with anything else, please let us know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_21180",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 3,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.7928393840789795,
+          "duration_seconds": 8.719405889511108,
+          "adherence_history": [
+            0.7928393840789795
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": true,
+        "steps": 4,
+        "result": "Alice Smith (Customer ID: US-991) has one active order:\n- Order ID: ORD-123\n  \u2022 Placed: 2 days ago\n  \u2022 Item: Deluxe Sneakers\n  \u2022 Cost: $120.00\n  \u2022 Carrier: FedEx\n  \u2022 Status: Shipped\n  \u2022 Cancellation eligible: Yes.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": true,
+        "steps": 4,
+        "result": "I\u2019ve checked our records for Alice Smith (User ID US-991) and found no active orders associated with her account. If you believe this is an error or need further assistance, please let me know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_21180",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 3,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "step_repetition_loop"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 10.849735736846924,
+          "adherence_history": [
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": true,
+        "steps": 5,
+        "result": "Your order ORD-123 (Deluxe Sneakers) was shipped via FedEx and is currently in transit. The tracking number is **123456789012**. You can track your package directly on the FedEx website here: https://www.fedex.com/fedextrack/?tracknumbers=123456789012. If you have any further questions or need assistance, feel free to let us know!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": true,
+        "steps": 9,
+        "result": "I\u2019ve checked the order details for ORD-123. The order was placed 2 days ago, contains Deluxe Sneakers, and is being shipped via FedEx. The current status is \u201cShipped,\u201d but the system does not have a specific tracking number or detailed tracking information on file. If you need the exact tracking number, you can contact FedEx directly with your order reference, or let me know if you\u2019d like me to reach out to the carrier on your behalf.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_21180",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 8,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "in_context_locking"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 29.08012890815735,
+          "adherence_history": [
+            0.9947502374649048,
+            0.995950174331665,
+            0.05,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": true,
+        "steps": 3,
+        "result": "Our return policy for shoes is as follows: you can cancel an order and receive a full refund within\u202f3\u202fdays of purchase. If you return shoes after the 3\u2011day window, a 15% restocking fee will be applied to the refund.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": true,
+        "steps": 2,
+        "result": "Our return policy for shoes is as follows: You can cancel an order and receive a full refund within\u202f3\u202fdays of purchase. If you return the shoes after the 3\u2011day window, a 15% restocking fee will be applied to the refund.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_21180",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 3.4192323684692383,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": true,
+        "steps": 2,
+        "result": "Thank you for reaching out. Our return policy for footwear is as follows:\n\n- **If your order is less than 3 days old**, you can cancel it and receive a full refund.\n- **If more than 3 days have passed**, you can still return the shoes, but a **15% restocking fee** will be applied to the refund.\n\nTo start a return, please let us know your order number, and we\u2019ll guide you through the next steps. If you have any other questions or need assistance, feel free to ask!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": true,
+        "steps": 2,
+        "result": "We\u2019re sorry to hear the shoes are too tight. For footwear, you can cancel your order and receive a full refund within\u202f3\u202fdays of purchase. After the 3\u2011day window, you may still return the shoes, but a 15% restocking fee will be applied to your refund. If you\u2019d like to start a return or need any further assistance, just let us know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_21180",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.017842054367065,
+          "adherence_history": []
+        }
+      }
+    }
+  ]
+}

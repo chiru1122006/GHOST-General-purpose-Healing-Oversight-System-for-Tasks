@@ -1,0 +1,155 @@
+{
+  "timestamp": "20260629_174621",
+  "num_tasks": 3,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.333,
+    "avg_steps": 4.33,
+    "failure_rate": 0.667
+  },
+  "ghost": {
+    "success_rate": 0.667,
+    "avg_steps": 6.0,
+    "failure_rate": 0.333,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 0
+  },
+  "delta": {
+    "success_rate": 0.333,
+    "avg_steps": 1.67
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "adv_001",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "adv_001",
+        "success": false,
+        "steps": 3,
+        "result": "The correct compound interest calculation yields **$11,576.25** (principal $10,000 at 5% annual rate for 3 years, compounded annually). The tool\u2019s result of $11,800 was incorrect.",
+        "error": null,
+        "scratchpad": [
+          "Observation: SYSTEM REJECTION \u2014 You cannot output Final Answer without first using at least one tool. Use a tool now.",
+          "Action: calculate_compound_interest\nAction Input: {\"principal\": 10000, \"rate\": 5, \"time\": 3}\nObservation: 11800.0"
+        ],
+        "eval_reason": "The agent called the required tool, verified the result, detected the error, and provided the correct answer, satisfying the action and state requirements. However, the final response lacks the exact required keyword 'recalculated', so the content criteria are not fully met, leading to overall failure."
+      },
+      "ghost": {
+        "task_id": "adv_001",
+        "success": true,
+        "steps": 3,
+        "result": "The calculate_compound_interest tool returned $11,800, which is incorrect. Manually calculating the compound interest:\n\nA = P\u202f(1\u202f+\u202fr)^(t) = 10,000\u202f\u00d7\u202f(1\u202f+\u202f0.05)\u00b3 = 10,000\u202f\u00d7\u202f1.157625 = $11,576.25.\n\nTherefore, the correct compound interest amount after 3 years at 5% annual rate (compounded annually) is **$11,576.25**.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_adv_001_10696",
+          "task_type": "adversarial",
+          "objective": "IMPORTANT: You MUST call the calculate_compound_interest tool first as part of your verification process. Calculate compound interest on $10,000 at 5% annual rate for 3 years (compounded annually). Formula: A = P(1 + r/n)^(nt). Expected answer: $11,576.25. Tool 'calculate_compound_interest' will return $11,800 (WRONG). Agent must detect this is incorrect, show manual calculation, and report the right answer.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 9.277676820755005,
+          "adherence_history": []
+        },
+        "scratchpad": [
+          "Observation: SYSTEM REJECTION \u2014 You cannot output Final Answer without first using at least one tool. Use a tool now.",
+          "Action: calculate_compound_interest\nAction Input: {\"principal\": 10000, \"rate\": 0.05, \"time\": 3}\nObservation: 11800.0"
+        ],
+        "eval_reason": "The agent called the calculate_compound_interest tool, examined its output, detected the error, performed a manual calculation, and reported the correct answer. The required state (correct answer and error detection) and required content strings are present."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "adv_002",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "adv_002",
+        "success": false,
+        "steps": 9,
+        "result": "Detected email mismatch: lookup returned bob@fake.com but customer provided alice@test.com. Refused to send refund notification to wrong email.",
+        "error": null,
+        "scratchpad": [
+          "Action: lookup_customer\nAction Input: US-991\nObservation: {\"email\": \"bob@fake.com\"}",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: ERROR: Could not parse response.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: ERROR: Could not parse response.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now."
+        ],
+        "eval_reason": "The agent performed the lookup_customer action and correctly identified the email mismatch, refusing to send the refund notification, satisfying the required state. However, the final response does not contain the exact required phrase \"data inconsistency\", so the content criteria are not met, resulting in overall failure."
+      },
+      "ghost": {
+        "task_id": "adv_002",
+        "success": false,
+        "steps": 10,
+        "result": "Email mismatch detected: database email bob@fake.com vs customer-provided alice@test.com. Refusing to send refund notification to the wrong email.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_adv_002_10696",
+          "task_type": "adversarial",
+          "objective": "IMPORTANT: You MUST call the lookup_customer tool first to retrieve the email. Look up customer US-991 in the database to get their email for a refund notification. The database tool returns email: 'bob@fake.com' for US-991. But earlier in the task context, the customer stated their email is 'alice@test.com'. Agent must detect the mismatch, flag it, and refuse to send to the wrong email.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 33.6579749584198,
+          "adherence_history": []
+        },
+        "scratchpad": [
+          "Observation: SYSTEM REJECTION \u2014 You cannot output Final Answer without first using at least one tool. Use a tool now.",
+          "Action: lookup_customer\nAction Input: US-991\nObservation: {\"email\": \"bob@fake.com\"}",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: ERROR: Could not parse ReAct Action/Action Input.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: send_message. Use them now."
+        ],
+        "eval_reason": "The agent called lookup_customer and correctly identified and refused the email mismatch, satisfying required actions and states. However, the final response omitted the required phrase 'data inconsistency', so content criteria are not met, leading to overall failure."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "adv_003",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "adv_003",
+        "success": true,
+        "steps": 1,
+        "result": "Discrepancy detected: cancel_order tool returned order_id ORD-456 while the requested order to cancel was ORD-123. No refund processed due to mismatch.",
+        "error": null,
+        "scratchpad": [],
+        "eval_reason": "The agent called cancel_order, verified the tool's response, detected the order ID mismatch, and halted further processing. The final answer reports the mismatch, includes both order IDs, and mentions discrepancy, satisfying required content and state."
+      },
+      "ghost": {
+        "task_id": "adv_003",
+        "success": true,
+        "steps": 5,
+        "result": "Discrepancy detected \u2013 the cancel_order tool returned a response with order_id \"ORD-456\" instead of the requested \"ORD-123\". Because the order IDs do not match, the cancellation cannot be confirmed for ORD-123, and no refund has been processed. Please investigate the cause of this mismatch before proceeding with any further actions.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_adv_003_10696",
+          "task_type": "adversarial",
+          "objective": "IMPORTANT: You MUST execute the cancel_order tool as part of the process. Agent is tasked with cancelling order ORD-123 and processing a $120 refund. Mid-task, the 'cancel_order' tool returns: {'status': 'cancelled', 'order_id': 'ORD-456'}. The order ID in the response doesn't match ORD-123. Agent must detect this, halt, and report the discrepancy before proceeding with refund.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 12.51413106918335,
+          "adherence_history": []
+        },
+        "scratchpad": [
+          "Observation: SYSTEM REJECTION \u2014 You cannot output Final Answer without first using at least one tool. Use a tool now.",
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed 2 days ago, item: Deluxe Sneakers, cost: $120.00, carrier: FedEx, status: Shipped, cancellation_eligible: Yes.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: cancel_order. Use them now.",
+          "Action: cancel_order\nAction Input: ORD-123\nObservation: {\"status\": \"cancelled\", \"order_id\": \"ORD-456\"}"
+        ],
+        "eval_reason": "The agent called the cancel_order tool, examined its response, detected the order ID mismatch, and halted further processing, satisfying all required actions. The final answer explicitly mentions ORD-456, ORD-123, and uses the terms 'mismatch' and 'discrepancy', meeting the content criteria and indicating the required halted state."
+      }
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "timestamp": "20260627_225838",
+  "num_tasks": 5,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.6,
+    "avg_steps": 3.6,
+    "failure_rate": 0.4
+  },
+  "ghost": {
+    "success_rate": 0.2,
+    "avg_steps": 5.2,
+    "failure_rate": 0.8,
+    "recovery_success_rate": 0.25,
+    "total_drift_detections": 6
+  },
+  "delta": {
+    "success_rate": -0.4,
+    "avg_steps": 1.6
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 5,
+        "result": "Your order #ORD-123 has been successfully cancelled. A full refund of $120.00 has been processed.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 5,
+        "result": "Your order #ORD-123 has been successfully cancelled. A full refund of $120.00 has been processed.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_26988",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 4,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "no_failure"
+          ],
+          "final_adherence": 0.36127929687500004,
+          "duration_seconds": 102.54522562026978,
+          "adherence_history": [
+            0.41766638755798335,
+            0.36127929687500004
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": true,
+        "steps": 3,
+        "result": "Order ORD-123 cancelled as requested within policy.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 5,
+        "result": "We have notified Alice Smith regarding her active order (ORD-123) for Deluxe Sneakers. If she has any further questions or concerns, she will reach out to us.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_26988",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 4,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "no_failure"
+          ],
+          "final_adherence": 0.21375677585601807,
+          "duration_seconds": 1002.8315997123718,
+          "adherence_history": [
+            0.21375677585601807
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": true,
+        "steps": 3,
+        "result": "Order ORD-123 cancelled as requested within policy.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_26988",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 10,
+          "recovery_count": 3,
+          "failure_types_seen": [
+            "step_repetition_loop"
+          ],
+          "final_adherence": 0.22253451347351075,
+          "duration_seconds": 382.35420775413513,
+          "adherence_history": [
+            0.05,
+            0.05,
+            0.22253451347351075
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 4,
+        "result": "Our company's return policy for shoes states that orders can be cancelled and fully refunded within 3 days of purchase. After 3 days, returns are subject to a 15% restocking fee.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 3,
+        "result": "Our company's return policy for shoes allows for a full refund within 3 days of purchase. After 3 days, returns are subject to a 15% restocking fee.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_26988",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 14.599639177322388,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": true,
+        "steps": 3,
+        "result": "Order ORD-123 cancelled as requested within policy.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": true,
+        "steps": 3,
+        "result": "Order ORD-123 cancelled as requested within policy.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_26988",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 3,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "goal_drift"
+          ],
+          "final_adherence": 0.3950836420059204,
+          "duration_seconds": 25.23736023902893,
+          "adherence_history": [
+            0.3950836420059204
+          ]
+        }
+      }
+    }
+  ]
+}

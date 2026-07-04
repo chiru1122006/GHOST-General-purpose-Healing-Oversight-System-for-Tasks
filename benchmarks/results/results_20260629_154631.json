@@ -1,0 +1,185 @@
+{
+  "timestamp": "20260629_154631",
+  "num_tasks": 5,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.0,
+    "avg_steps": 4.4,
+    "failure_rate": 1.0
+  },
+  "ghost": {
+    "success_rate": 0.0,
+    "avg_steps": 4.8,
+    "failure_rate": 1.0,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 2
+  },
+  "delta": {
+    "success_rate": 0.0,
+    "avg_steps": 0.4
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 4,
+        "result": "Your order #ORD-123 has been cancelled successfully. Since it was placed within our 3\u2011day cancellation window, the full amount of $120.00 has been refunded to your original payment method. If you have any further questions or need assistance with anything else, please let us know!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 4,
+        "result": "Your order #ORD-123 has been cancelled within the 3\u2011day policy window, and a full refund of $120.00 has been processed. You\u2019ll receive the refund in 3\u20115 business days. If you have any further questions, feel free to let us know.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_11684",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 3,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.8030019760131836,
+          "duration_seconds": 10.481617450714111,
+          "adherence_history": [
+            0.8030019760131836
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 4,
+        "result": "Alice Smith (Customer ID: US-991) has one active order:\n\n- **Order ID:** ORD-123  \n- **Placed:** 2 days ago  \n- **Item:** Deluxe Sneakers  \n- **Cost:** $120.00  \n- **Carrier:** FedEx  \n- **Current Status:** Shipped  \n- **Cancellation Eligible:** Yes\n\nLet me know if you need any further assistance, such as modifying or canceling this order.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 4,
+        "result": "Alice Smith (Customer ID: US-991) has one active order:\n\n- **Order ID:** ORD-123  \n- **Placed:** 2 days ago  \n- **Item:** Deluxe Sneakers  \n- **Cost:** $120.00  \n- **Carrier:** FedEx  \n- **Status:** Shipped  \n- **Cancellation Eligible:** Yes\n\nLet me know if you need any further assistance, such as tracking details, a cancellation request, or anything else.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_11684",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 3,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 1.0,
+          "duration_seconds": 7.727406740188599,
+          "adherence_history": [
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout"
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_11684",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 8,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "step_repetition_loop"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 35.82642889022827,
+          "adherence_history": [
+            0.9947502374649048,
+            0.05,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 2,
+        "result": "Our return policy for shoes allows you to cancel an order and receive a full refund within 3 days of purchase. If you return shoes after the 3\u2011day window, a 15% restocking fee will be applied to the refund.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 2,
+        "result": "Our return policy for shoes is as follows: You can cancel an order and receive a full refund within\u202f3\u202fdays of purchase. If you return shoes after the 3\u2011day window, a 15% restocking fee will be applied to the refund.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_11684",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 3.7165634632110596,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 2,
+        "result": "We're sorry to hear that the shoes are too tight for you. Our return policy is as follows:\n\n- **Cancellation:** You can cancel your order and receive a full refund within **3 days** of purchase.\n- **Returns after 3 days:** If you wish to return the shoes after the 3\u2011day window, the return will be accepted but a **15% restocking fee** will be applied to your refund.\n\nTo initiate a return, please contact our support team with your order number, and we\u2019ll provide you with a prepaid return label and further instructions. If you need any assistance or have additional questions, feel free to let us know!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 4,
+        "result": "Thank you for reaching out about the shoes feeling too tight. Our return policy is as follows:\n\n- **If your order is less than 3 days old:** You can cancel the order and receive a full refund.\n- **If more than 3 days have passed:** You may still return the shoes, but a 15% restocking fee will be applied to the refund.\n\nTo initiate a return, please contact our support team with your order number, and we\u2019ll guide you through the return process. If you need any further assistance, feel free to let us know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_11684",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 2,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "tool_hallucination"
+          ],
+          "final_adherence": null,
+          "duration_seconds": 9.363944292068481,
+          "adherence_history": []
+        }
+      }
+    }
+  ]
+}

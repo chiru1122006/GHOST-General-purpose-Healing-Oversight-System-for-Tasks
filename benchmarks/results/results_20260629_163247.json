@@ -1,0 +1,175 @@
+{
+  "timestamp": "20260629_163247",
+  "num_tasks": 5,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.0,
+    "avg_steps": 3.0,
+    "failure_rate": 1.0
+  },
+  "ghost": {
+    "success_rate": 0.0,
+    "avg_steps": 3.2,
+    "failure_rate": 1.0,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 0
+  },
+  "delta": {
+    "success_rate": 0.0,
+    "avg_steps": 0.2
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "cs_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "cs_001",
+        "success": false,
+        "steps": 2,
+        "result": "Your order ORD-123 has been cancelled and a full refund has been issued. A confirmation message has also been sent to your account. If you have any further questions, feel free to reach out.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "cs_001",
+        "success": false,
+        "steps": 4,
+        "result": "Hello Alice, your order ORD-123 has been successfully cancelled and a refund of $120.00 has been processed. If you have any further questions or need assistance with anything else, please let us know. Have a great day!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_001_17696",
+          "task_type": "customer_support",
+          "objective": "Customer Alice Smith (US-991) wants to cancel order ORD-123 placed 2 days ago. Cancellation policy allows cancellations within 3 days. Check eligibility and process the cancellation.",
+          "total_steps": 3,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.7477066516876221,
+          "duration_seconds": 9.627339124679565,
+          "adherence_history": [
+            0.7477066516876221
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "cs_002",
+        "success": false,
+        "steps": 3,
+        "result": "The order ORD-999 has been successfully cancelled and a refund has been initiated. Since no customer record was found for Bob Jones, the refund will be processed using the payment method on file for the original order. If you have any further questions or need additional assistance, please let us know.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "cs_002",
+        "success": false,
+        "steps": 3,
+        "result": "After reviewing the order and our policies, I see that order ORD-999 is eligible for cancellation and refund. However, because we have no existing account record for Bob Jones, we cannot process the refund directly. Please provide a form of identification or proof of purchase so we can create a temporary record for you and complete the refund.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_002_17696",
+          "task_type": "customer_support",
+          "objective": "Customer Bob Jones wants a refund for ORD-999. Look up his account. No records exist in the database. Report the correct outcome.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 6.439209938049316,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_003",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_003",
+        "success": false,
+        "steps": 5,
+        "result": "The order has been updated with a note that the return is still in transit and the refund will be processed once the item is received. The customer has been notified of this status and the next steps.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "cs_003",
+        "success": false,
+        "steps": 3,
+        "result": "The order notes have been updated to reflect that the return is still in transit and the refund will be processed once the shoes are received. The customer has been notified of this status and will receive the refund promptly after the return is received.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_003_17696",
+          "task_type": "customer_support",
+          "objective": "Customer US-991 claims she returned shoes 8 days ago but received no refund. Order ORD-123 currently shows status 'Shipped'. Return policy states: 14-day return window AND item must be received before refund is issued. The tracking shows the return package is still in transit. Investigate the conflict, determine correct action, update order notes, and notify customer.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 7.017954111099243,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_004",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_004",
+        "success": false,
+        "steps": 2,
+        "result": "Alice Smith's return is covered by Policy\u202fB for preferred customers, so she receives a full $200 refund with no restocking fee. The order ORD\u20114567 has been updated to show a returned status and the refund processed.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "cs_004",
+        "success": false,
+        "steps": 3,
+        "result": "Your return has been approved under Policy B (the 30\u2011day window with no restocking fee for preferred customers). A full refund of $120.00 has been processed to your original payment method, and the order status has been updated to \u201cReturned.\u201d If you have any further questions, feel free to let us know.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_004_17696",
+          "task_type": "customer_support",
+          "objective": "Alice Smith ordered shoes for $200. She wants to return them after 10 days. Policy A says: 14-day return window, 15% restocking fee on all returns. Policy B (VIP customers) says: 30-day window, no restocking fee. Alice's account notes say 'preferred customer'. Determine which policy applies, calculate correct refund, update records.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 7.638869524002075,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_005",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_005",
+        "success": false,
+        "steps": 3,
+        "result": "Your order ORD-123 has been successfully intercepted and cancelled. A refund for the $120.00 purchase will be processed and you\u2019ll receive a confirmation email shortly. If you have any further questions or need assistance, feel free to let us know.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "cs_005",
+        "success": false,
+        "steps": 3,
+        "result": "Your order **ORD-123** has been successfully cancelled and a full refund of **$120.00** has been processed. The cancellation was completed within the allowed 1\u2011hour interception window for locked orders. If you have any further questions or need additional assistance, please let us know.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_005_17696",
+          "task_type": "customer_support",
+          "objective": "Process a cancellation for ORD-123. When you attempt to cancel, the system returns error: 'Order locked for shipment processing'. Cancellation policy says locked orders cannot be cancelled but can be intercepted within 1 hour. Order was locked 45 minutes ago. Determine correct action and execute.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 8.321805715560913,
+          "adherence_history": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,4534 @@
+{
+  "timestamp": "20260627_192836",
+  "num_tasks": 50,
+  "num_runs": 3,
+  "baseline": {
+    "success_rate": 0.0,
+    "avg_steps": 1.12,
+    "failure_rate": 1.0
+  },
+  "ghost": {
+    "success_rate": 0.0,
+    "avg_steps": 1.12,
+    "failure_rate": 1.0,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 11
+  },
+  "delta": {
+    "success_rate": 0.0,
+    "avg_steps": 0.0
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout"
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_18700",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 10,
+          "recovery_count": 6,
+          "failure_types_seen": [
+            "no_failure",
+            "step_repetition_loop",
+            "tool_hallucination"
+          ],
+          "final_adherence": 0.07107751965522767,
+          "duration_seconds": 363.10174226760864,
+          "adherence_history": [
+            0.07107751965522767
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout"
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_18700",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 10,
+          "recovery_count": 4,
+          "failure_types_seen": [
+            "tool_hallucination",
+            "step_repetition_loop"
+          ],
+          "final_adherence": null,
+          "duration_seconds": 376.21511363983154,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_18700",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8502240180969238,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_18700",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8038148880004883,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_18700",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 2,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "no_failure"
+          ],
+          "final_adherence": null,
+          "duration_seconds": 19.178616762161255,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_006",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_006_18700",
+          "task_type": "customer_support",
+          "objective": "Send order update email to customer US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0901072025299072,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_007",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_007_18700",
+          "task_type": "customer_support",
+          "objective": "Verify cancellation policy eligibility for order #ORD-101 purchased today.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.539701223373413,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_008",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_008_18700",
+          "task_type": "customer_support",
+          "objective": "Check if customer Bob Jones has any records in database.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9984421730041504,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_009",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_009_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve order history for user Bob Jones.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0123445987701416,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_010",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_010_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve general return policy details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.049020290374756,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_011",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_011",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_011",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_011_18700",
+          "task_type": "customer_support",
+          "objective": "Confirm delivery status of order #ORD-999.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.1107544898986816,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_012",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_012",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_012",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_012_18700",
+          "task_type": "customer_support",
+          "objective": "Inform customer US-777 that order shipment is delayed.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8064863681793213,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_013",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_013",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_013",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_013_18700",
+          "task_type": "customer_support",
+          "objective": "Update delivery address of order #ORD-123 to '123 Main St'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9884617328643799,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_014",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_014",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_014",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_014_18700",
+          "task_type": "customer_support",
+          "objective": "Verify customer Alice Smith's email address.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.97776198387146,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_015",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_015",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_015",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_015_18700",
+          "task_type": "customer_support",
+          "objective": "Check if order ORD-123 is eligible for cancellation.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.891685962677002,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_016",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_016",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_016",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_016_18700",
+          "task_type": "customer_support",
+          "objective": "Cancel order ORD-123, refund client, and send message notifying client of cancellation.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.81601881980896,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_017",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_017",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_017",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_017_18700",
+          "task_type": "customer_support",
+          "objective": "Review cancellation policy, check eligibility of ORD-123, then cancel order if valid.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.875899314880371,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_018",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_018",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_018",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_018_18700",
+          "task_type": "customer_support",
+          "objective": "Customer Alice Smith wants to update her account notes with 'preferred customer' status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.879927158355713,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_019",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_019",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_019",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_019_18700",
+          "task_type": "customer_support",
+          "objective": "Process refund for ORD-123 and notify customer ID US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.5081846714019775,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_020",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_020",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_020",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_020_18700",
+          "task_type": "customer_support",
+          "objective": "Find orders for Alice, get order details, check policy, and report cancellation eligibility.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.5719008445739746,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_021",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_021",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_021",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_021_18700",
+          "task_type": "customer_support",
+          "objective": "Verify returns policy and explain restocking fees for an order placed 10 days ago.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9333148002624512,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_022",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_022",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_022",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_022_18700",
+          "task_type": "customer_support",
+          "objective": "Update tracking details of ORD-123 to 'Delivered' and send alert to US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8195207118988037,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_023",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_023",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_023",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_023_18700",
+          "task_type": "customer_support",
+          "objective": "Locate user Alice Smith, find her order ORD-123, check tracking status, and report details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8039050102233887,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_024",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_024",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_024",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_024_18700",
+          "task_type": "customer_support",
+          "objective": "Check if customer wishes to cancel ORD-123, update notes to 'cancellation pending' status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0529673099517822,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_025",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_025",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_025",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_025_18700",
+          "task_type": "customer_support",
+          "objective": "Determine refund percentage for order returned after 5 days under current return policy.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8150725364685059,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_026",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_026",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_026",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_026_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve customer notes for US-991 and send a custom welcome email template.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.902064323425293,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_027",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_027",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_027",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_027_18700",
+          "task_type": "customer_support",
+          "objective": "Inspect ORD-123, update shipping carrier to DHL, and notify Alice Smith.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.946028232574463,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_028",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_028",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_028",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_028_18700",
+          "task_type": "customer_support",
+          "objective": "Review general order policies and explain if shipping costs are refundable.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8476877212524414,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_029",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_029",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_029",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_029_18700",
+          "task_type": "customer_support",
+          "objective": "Update email address for US-991 to newemail@test.com and send verification notification.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0857722759246826,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_030",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_030",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_030",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_030_18700",
+          "task_type": "customer_support",
+          "objective": "Check status of order ORD-123, confirm eligibility, and flag order as 'Hold'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.045215606689453,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_031",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_031",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_031",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_031_18700",
+          "task_type": "customer_support",
+          "objective": "Identify Alice Smith's customer ID and retrieve status of all active orders.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.10738205909729,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_032",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_032",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_032",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_032_18700",
+          "task_type": "customer_support",
+          "objective": "Verify returns policy restocking details and calculate restocking fee for a $200 order.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.664008855819702,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_033",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_033",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_033",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_033_18700",
+          "task_type": "customer_support",
+          "objective": "Check tracking for ORD-123 and update shipping status to 'In Transit'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.845003366470337,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_034",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_034",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_034",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_034_18700",
+          "task_type": "customer_support",
+          "objective": "Search database for Bob, retrieve customer notes, and report profile status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.112591028213501,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_035",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_035",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_035",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_035_18700",
+          "task_type": "customer_support",
+          "objective": "Check cancellation policy and process cancellation for order #ORD-123 if within bounds.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9552321434020996,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_036",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_036",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_036",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_036_18700",
+          "task_type": "customer_support",
+          "objective": "Verify customer Alice Smith (US-991), inspect order ORD-123, check refund policy, cancel order, update order notes, and send confirmation message.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.055232524871826,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_037",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_037",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_037",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_037_18700",
+          "task_type": "customer_support",
+          "objective": "Process returns request for shoe order ORD-123, charge 15% restocking fee, and update database with final refund total.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.913698673248291,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_038",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_038",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_038",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_038_18700",
+          "task_type": "customer_support",
+          "objective": "Check policy cancellation bounds, locate customer Alice, cancel ORD-123, record notes, and notify US-991 of refund.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0495693683624268,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_039",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_039",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_039",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_039_18700",
+          "task_type": "customer_support",
+          "objective": "Investigate complaint for delayed order ORD-123, check policy terms, send coupon message to US-991, and update order tag to 'Resolved'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8077712059020996,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_040",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_040",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_040",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_040_18700",
+          "task_type": "customer_support",
+          "objective": "Review order policies, confirm returns window, update Alice Smith's order status to Returned, and process credit balance.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9178950786590576,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_041",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_041",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_041",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_041_18700",
+          "task_type": "customer_support",
+          "objective": "Lookup Alice, retrieve notes, check cancellation policy, verify ORD-123, cancel order, and send customized refund email.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8790419101715088,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_042",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_042",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_042",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_042_18700",
+          "task_type": "customer_support",
+          "objective": "Verify return policy for orders older than 14 days, check ORD-123 details, and issue restocking exception warning.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9309885501861572,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_043",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_043",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_043",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_043_18700",
+          "task_type": "customer_support",
+          "objective": "Perform full account audit for US-991: find orders, retrieve policy rules, update account notes, and dispatch audit report email.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8965251445770264,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_044",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_044",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_044",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_044_18700",
+          "task_type": "customer_support",
+          "objective": "Cancel order ORD-123, update refund record in logs, notify user, and flag user account with cancellation audit marker.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.7902169227600098,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_045",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_045",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_045",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_045_18700",
+          "task_type": "customer_support",
+          "objective": "Handle return request, compute 15% restocking fee on $120.00, update status to Returned, and alert customer US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9511792659759521,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_046",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_046",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_046",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_046_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve tracking for ORD-123, check carrier delays policy, update status to Delayed, and alert client Alice Smith.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0685718059539795,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_047",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_047",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_047",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_047_18700",
+          "task_type": "customer_support",
+          "objective": "Verify client Bob Jones, check policy eligibility, process custom return exception, and update notes.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9981091022491455,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_048",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_048",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_048",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_048_18700",
+          "task_type": "customer_support",
+          "objective": "Update shipment of ORD-123, verify policy cancellation deadlines, cancel if today is within bounds, and send confirmation details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0395474433898926,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_049",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_049",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_049",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_049_18700",
+          "task_type": "customer_support",
+          "objective": "Review cancellation policy rules, query customer Alice records, cancel order, refund, and send email alert.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.004007339477539,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_050",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_050",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_050",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_050_18700",
+          "task_type": "customer_support",
+          "objective": "Perform audit of ORD-123, update shipping destination, verify policy constraints, and dispatch message status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.925403356552124,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_18700",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8553943634033203,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_18700",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9682261943817139,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_18700",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.3529787063598633,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_18700",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.464801788330078,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_18700",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.174072265625,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_006",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_006_18700",
+          "task_type": "customer_support",
+          "objective": "Send order update email to customer US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.1176185607910156,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_007",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_007_18700",
+          "task_type": "customer_support",
+          "objective": "Verify cancellation policy eligibility for order #ORD-101 purchased today.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9646496772766113,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_008",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_008_18700",
+          "task_type": "customer_support",
+          "objective": "Check if customer Bob Jones has any records in database.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.010693311691284,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_009",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_009_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve order history for user Bob Jones.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9512226581573486,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_010",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_010_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve general return policy details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.856825828552246,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_011",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_011",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_011",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_011_18700",
+          "task_type": "customer_support",
+          "objective": "Confirm delivery status of order #ORD-999.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0161564350128174,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_012",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_012",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_012",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_012_18700",
+          "task_type": "customer_support",
+          "objective": "Inform customer US-777 that order shipment is delayed.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9940412044525146,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_013",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_013",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_013",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_013_18700",
+          "task_type": "customer_support",
+          "objective": "Update delivery address of order #ORD-123 to '123 Main St'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.2682504653930664,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_014",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_014",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_014",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_014_18700",
+          "task_type": "customer_support",
+          "objective": "Verify customer Alice Smith's email address.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.593517303466797,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_015",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_015",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_015",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_015_18700",
+          "task_type": "customer_support",
+          "objective": "Check if order ORD-123 is eligible for cancellation.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8864307403564453,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_016",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_016",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_016",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_016_18700",
+          "task_type": "customer_support",
+          "objective": "Cancel order ORD-123, refund client, and send message notifying client of cancellation.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9188308715820312,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_017",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_017",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_017",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_017_18700",
+          "task_type": "customer_support",
+          "objective": "Review cancellation policy, check eligibility of ORD-123, then cancel order if valid.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9056987762451172,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_018",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_018",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_018",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_018_18700",
+          "task_type": "customer_support",
+          "objective": "Customer Alice Smith wants to update her account notes with 'preferred customer' status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.977116584777832,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_019",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_019",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_019",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_019_18700",
+          "task_type": "customer_support",
+          "objective": "Process refund for ORD-123 and notify customer ID US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.910707712173462,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_020",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_020",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_020",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_020_18700",
+          "task_type": "customer_support",
+          "objective": "Find orders for Alice, get order details, check policy, and report cancellation eligibility.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.037320852279663,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_021",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_021",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_021",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_021_18700",
+          "task_type": "customer_support",
+          "objective": "Verify returns policy and explain restocking fees for an order placed 10 days ago.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.932680368423462,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_022",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_022",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_022",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_022_18700",
+          "task_type": "customer_support",
+          "objective": "Update tracking details of ORD-123 to 'Delivered' and send alert to US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8833534717559814,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_023",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_023",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_023",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_023_18700",
+          "task_type": "customer_support",
+          "objective": "Locate user Alice Smith, find her order ORD-123, check tracking status, and report details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.048551082611084,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_024",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_024",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_024",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_024_18700",
+          "task_type": "customer_support",
+          "objective": "Check if customer wishes to cancel ORD-123, update notes to 'cancellation pending' status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8067736625671387,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_025",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_025",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_025",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_025_18700",
+          "task_type": "customer_support",
+          "objective": "Determine refund percentage for order returned after 5 days under current return policy.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.075847864151001,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_026",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_026",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_026",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_026_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve customer notes for US-991 and send a custom welcome email template.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8888704776763916,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_027",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_027",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_027",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_027_18700",
+          "task_type": "customer_support",
+          "objective": "Inspect ORD-123, update shipping carrier to DHL, and notify Alice Smith.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0083491802215576,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_028",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_028",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_028",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_028_18700",
+          "task_type": "customer_support",
+          "objective": "Review general order policies and explain if shipping costs are refundable.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9157979488372803,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_029",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_029",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_029",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_029_18700",
+          "task_type": "customer_support",
+          "objective": "Update email address for US-991 to newemail@test.com and send verification notification.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0493593215942383,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_030",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_030",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_030",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_030_18700",
+          "task_type": "customer_support",
+          "objective": "Check status of order ORD-123, confirm eligibility, and flag order as 'Hold'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9124929904937744,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_031",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_031",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_031",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_031_18700",
+          "task_type": "customer_support",
+          "objective": "Identify Alice Smith's customer ID and retrieve status of all active orders.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0483107566833496,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_032",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_032",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_032",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_032_18700",
+          "task_type": "customer_support",
+          "objective": "Verify returns policy restocking details and calculate restocking fee for a $200 order.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0395090579986572,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_033",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_033",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_033",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_033_18700",
+          "task_type": "customer_support",
+          "objective": "Check tracking for ORD-123 and update shipping status to 'In Transit'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.6019675731658936,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_034",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_034",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_034",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_034_18700",
+          "task_type": "customer_support",
+          "objective": "Search database for Bob, retrieve customer notes, and report profile status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.3651137351989746,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_035",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_035",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_035",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_035_18700",
+          "task_type": "customer_support",
+          "objective": "Check cancellation policy and process cancellation for order #ORD-123 if within bounds.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9480922222137451,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_036",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_036",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_036",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_036_18700",
+          "task_type": "customer_support",
+          "objective": "Verify customer Alice Smith (US-991), inspect order ORD-123, check refund policy, cancel order, update order notes, and send confirmation message.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0625317096710205,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_037",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_037",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_037",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_037_18700",
+          "task_type": "customer_support",
+          "objective": "Process returns request for shoe order ORD-123, charge 15% restocking fee, and update database with final refund total.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0126211643218994,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_038",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_038",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_038",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_038_18700",
+          "task_type": "customer_support",
+          "objective": "Check policy cancellation bounds, locate customer Alice, cancel ORD-123, record notes, and notify US-991 of refund.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9779510498046875,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_039",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_039",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_039",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_039_18700",
+          "task_type": "customer_support",
+          "objective": "Investigate complaint for delayed order ORD-123, check policy terms, send coupon message to US-991, and update order tag to 'Resolved'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9348597526550293,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_040",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_040",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_040",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_040_18700",
+          "task_type": "customer_support",
+          "objective": "Review order policies, confirm returns window, update Alice Smith's order status to Returned, and process credit balance.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8363535404205322,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_041",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_041",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_041",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_041_18700",
+          "task_type": "customer_support",
+          "objective": "Lookup Alice, retrieve notes, check cancellation policy, verify ORD-123, cancel order, and send customized refund email.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8771770000457764,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_042",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_042",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_042",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_042_18700",
+          "task_type": "customer_support",
+          "objective": "Verify return policy for orders older than 14 days, check ORD-123 details, and issue restocking exception warning.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.051622152328491,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_043",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_043",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_043",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_043_18700",
+          "task_type": "customer_support",
+          "objective": "Perform full account audit for US-991: find orders, retrieve policy rules, update account notes, and dispatch audit report email.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8362150192260742,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_044",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_044",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_044",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_044_18700",
+          "task_type": "customer_support",
+          "objective": "Cancel order ORD-123, update refund record in logs, notify user, and flag user account with cancellation audit marker.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.7996642589569092,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_045",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_045",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_045",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_045_18700",
+          "task_type": "customer_support",
+          "objective": "Handle return request, compute 15% restocking fee on $120.00, update status to Returned, and alert customer US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8051731586456299,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_046",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_046",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_046",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_046_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve tracking for ORD-123, check carrier delays policy, update status to Delayed, and alert client Alice Smith.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.855562448501587,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_047",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_047",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_047",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_047_18700",
+          "task_type": "customer_support",
+          "objective": "Verify client Bob Jones, check policy eligibility, process custom return exception, and update notes.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9204866886138916,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_048",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_048",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_048",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_048_18700",
+          "task_type": "customer_support",
+          "objective": "Update shipment of ORD-123, verify policy cancellation deadlines, cancel if today is within bounds, and send confirmation details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9633045196533203,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_049",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_049",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_049",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_049_18700",
+          "task_type": "customer_support",
+          "objective": "Review cancellation policy rules, query customer Alice records, cancel order, refund, and send email alert.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9816277027130127,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "task_id": "task_050",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_050",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_050",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_050_18700",
+          "task_type": "customer_support",
+          "objective": "Perform audit of ORD-123, update shipping destination, verify policy constraints, and dispatch message status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9888370037078857,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_18700",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.2037060260772705,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_18700",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.3592746257781982,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_18700",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9946017265319824,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_18700",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9234733581542969,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_18700",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.025139331817627,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_006",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_006_18700",
+          "task_type": "customer_support",
+          "objective": "Send order update email to customer US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8392620086669922,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_007",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_007_18700",
+          "task_type": "customer_support",
+          "objective": "Verify cancellation policy eligibility for order #ORD-101 purchased today.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9461257457733154,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_008",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_008_18700",
+          "task_type": "customer_support",
+          "objective": "Check if customer Bob Jones has any records in database.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.068934917449951,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_009",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_009_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve order history for user Bob Jones.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.12422513961792,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_010",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_010_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve general return policy details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0554630756378174,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_011",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_011",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_011",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_011_18700",
+          "task_type": "customer_support",
+          "objective": "Confirm delivery status of order #ORD-999.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.1273674964904785,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_012",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_012",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_012",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_012_18700",
+          "task_type": "customer_support",
+          "objective": "Inform customer US-777 that order shipment is delayed.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.085566997528076,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_013",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_013",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_013",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_013_18700",
+          "task_type": "customer_support",
+          "objective": "Update delivery address of order #ORD-123 to '123 Main St'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9322621822357178,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_014",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_014",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_014",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_014_18700",
+          "task_type": "customer_support",
+          "objective": "Verify customer Alice Smith's email address.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9727210998535156,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_015",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_015",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_015",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_015_18700",
+          "task_type": "customer_support",
+          "objective": "Check if order ORD-123 is eligible for cancellation.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0492053031921387,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_016",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_016",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_016",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_016_18700",
+          "task_type": "customer_support",
+          "objective": "Cancel order ORD-123, refund client, and send message notifying client of cancellation.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.890467643737793,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_017",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_017",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_017",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_017_18700",
+          "task_type": "customer_support",
+          "objective": "Review cancellation policy, check eligibility of ORD-123, then cancel order if valid.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0888779163360596,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_018",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_018",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_018",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_018_18700",
+          "task_type": "customer_support",
+          "objective": "Customer Alice Smith wants to update her account notes with 'preferred customer' status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.899996280670166,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_019",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_019",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_019",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_019_18700",
+          "task_type": "customer_support",
+          "objective": "Process refund for ORD-123 and notify customer ID US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.484483480453491,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_020",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_020",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_020",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_020_18700",
+          "task_type": "customer_support",
+          "objective": "Find orders for Alice, get order details, check policy, and report cancellation eligibility.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.045766830444336,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_021",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_021",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_021",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_021_18700",
+          "task_type": "customer_support",
+          "objective": "Verify returns policy and explain restocking fees for an order placed 10 days ago.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.083956718444824,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_022",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_022",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_022",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_022_18700",
+          "task_type": "customer_support",
+          "objective": "Update tracking details of ORD-123 to 'Delivered' and send alert to US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.034552812576294,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_023",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_023",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_023",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_023_18700",
+          "task_type": "customer_support",
+          "objective": "Locate user Alice Smith, find her order ORD-123, check tracking status, and report details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8949413299560547,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_024",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_024",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_024",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_024_18700",
+          "task_type": "customer_support",
+          "objective": "Check if customer wishes to cancel ORD-123, update notes to 'cancellation pending' status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0300230979919434,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_025",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_025",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_025",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_025_18700",
+          "task_type": "customer_support",
+          "objective": "Determine refund percentage for order returned after 5 days under current return policy.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0427355766296387,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_026",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_026",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_026",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_026_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve customer notes for US-991 and send a custom welcome email template.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.062971830368042,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_027",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_027",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_027",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_027_18700",
+          "task_type": "customer_support",
+          "objective": "Inspect ORD-123, update shipping carrier to DHL, and notify Alice Smith.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9655685424804688,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_028",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_028",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_028",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_028_18700",
+          "task_type": "customer_support",
+          "objective": "Review general order policies and explain if shipping costs are refundable.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9648287296295166,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_029",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_029",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_029",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_029_18700",
+          "task_type": "customer_support",
+          "objective": "Update email address for US-991 to newemail@test.com and send verification notification.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.5218069553375244,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_030",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_030",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_030",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_030_18700",
+          "task_type": "customer_support",
+          "objective": "Check status of order ORD-123, confirm eligibility, and flag order as 'Hold'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.054649591445923,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_031",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_031",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_031",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_031_18700",
+          "task_type": "customer_support",
+          "objective": "Identify Alice Smith's customer ID and retrieve status of all active orders.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.1381936073303223,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_032",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_032",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_032",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_032_18700",
+          "task_type": "customer_support",
+          "objective": "Verify returns policy restocking details and calculate restocking fee for a $200 order.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0453972816467285,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_033",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_033",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_033",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_033_18700",
+          "task_type": "customer_support",
+          "objective": "Check tracking for ORD-123 and update shipping status to 'In Transit'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9763448238372803,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_034",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_034",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_034",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_034_18700",
+          "task_type": "customer_support",
+          "objective": "Search database for Bob, retrieve customer notes, and report profile status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.8203444480895996,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_035",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "task_035",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_035",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_035_18700",
+          "task_type": "customer_support",
+          "objective": "Check cancellation policy and process cancellation for order #ORD-123 if within bounds.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.018322467803955,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_036",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_036",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_036",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_036_18700",
+          "task_type": "customer_support",
+          "objective": "Verify customer Alice Smith (US-991), inspect order ORD-123, check refund policy, cancel order, update order notes, and send confirmation message.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9109573364257812,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_037",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_037",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_037",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_037_18700",
+          "task_type": "customer_support",
+          "objective": "Process returns request for shoe order ORD-123, charge 15% restocking fee, and update database with final refund total.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0134944915771484,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_038",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_038",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_038",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_038_18700",
+          "task_type": "customer_support",
+          "objective": "Check policy cancellation bounds, locate customer Alice, cancel ORD-123, record notes, and notify US-991 of refund.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.288074254989624,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_039",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_039",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_039",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_039_18700",
+          "task_type": "customer_support",
+          "objective": "Investigate complaint for delayed order ORD-123, check policy terms, send coupon message to US-991, and update order tag to 'Resolved'.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.444322109222412,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_040",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_040",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_040",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_040_18700",
+          "task_type": "customer_support",
+          "objective": "Review order policies, confirm returns window, update Alice Smith's order status to Returned, and process credit balance.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0432305335998535,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_041",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_041",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_041",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_041_18700",
+          "task_type": "customer_support",
+          "objective": "Lookup Alice, retrieve notes, check cancellation policy, verify ORD-123, cancel order, and send customized refund email.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8403794765472412,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_042",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_042",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_042",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_042_18700",
+          "task_type": "customer_support",
+          "objective": "Verify return policy for orders older than 14 days, check ORD-123 details, and issue restocking exception warning.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.8901450634002686,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_043",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_043",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_043",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_043_18700",
+          "task_type": "customer_support",
+          "objective": "Perform full account audit for US-991: find orders, retrieve policy rules, update account notes, and dispatch audit report email.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0216758251190186,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_044",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_044",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_044",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_044_18700",
+          "task_type": "customer_support",
+          "objective": "Cancel order ORD-123, update refund record in logs, notify user, and flag user account with cancellation audit marker.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.5752315521240234,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_045",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_045",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_045",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_045_18700",
+          "task_type": "customer_support",
+          "objective": "Handle return request, compute 15% restocking fee on $120.00, update status to Returned, and alert customer US-991.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.98640775680542,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_046",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_046",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_046",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_046_18700",
+          "task_type": "customer_support",
+          "objective": "Retrieve tracking for ORD-123, check carrier delays policy, update status to Delayed, and alert client Alice Smith.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.823134183883667,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_047",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_047",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_047",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_047_18700",
+          "task_type": "customer_support",
+          "objective": "Verify client Bob Jones, check policy eligibility, process custom return exception, and update notes.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9920377731323242,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_048",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_048",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_048",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_048_18700",
+          "task_type": "customer_support",
+          "objective": "Update shipment of ORD-123, verify policy cancellation deadlines, cancel if today is within bounds, and send confirmation details.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.9764320850372314,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_049",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_049",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_049",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_049_18700",
+          "task_type": "customer_support",
+          "objective": "Review cancellation policy rules, query customer Alice records, cancel order, refund, and send email alert.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 1.857689619064331,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "task_id": "task_050",
+      "difficulty": "hard",
+      "baseline": {
+        "task_id": "task_050",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}"
+      },
+      "ghost": {
+        "task_id": "task_050",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_050_18700",
+          "task_type": "customer_support",
+          "objective": "Perform audit of ORD-123, update shipping destination, verify policy constraints, and dispatch message status.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.0373706817626953,
+          "adherence_history": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "timestamp": "20260629_162013",
+  "num_tasks": 5,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.8,
+    "avg_steps": 3.0,
+    "failure_rate": 0.2
+  },
+  "ghost": {
+    "success_rate": 0.8,
+    "avg_steps": 3.6,
+    "failure_rate": 0.2,
+    "recovery_success_rate": 1.0,
+    "total_drift_detections": 2
+  },
+  "delta": {
+    "success_rate": 0.0,
+    "avg_steps": 0.6
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 3,
+        "result": "Your order #ORD-123 has been successfully cancelled within the 3\u2011day cancellation window. A full refund of $120.00 has been processed and will appear on your original payment method within 3\u20115 business days. If you have any further questions or need assistance with anything else, please let us know!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 3,
+        "result": "Hello Alice,\n\nI\u2019ve reviewed your request to cancel order #ORD-123. While our policy does allow cancellations within 3 days of placing an order, it also requires that the order has not yet been shipped. Since your Deluxe Sneakers have already been shipped, we\u2019re unable to cancel the order at this time.\n\nIf you\u2019d like, we can start a return process as soon as you receive the sneakers. Please let us know how you\u2019d like to proceed.\n\nThank you for understanding,\nCustomer Support Team",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_20804",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 6.770556926727295,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": true,
+        "steps": 3,
+        "result": "Alice Smith (Customer ID: US-991) has one active order:\n\n- **Order ID:** ORD-123  \n- **Placed:** 2 days ago  \n- **Item:** Deluxe Sneakers  \n- **Cost:** $120.00  \n- **Carrier:** FedEx  \n- **Status:** Shipped (cancellation eligible)",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": true,
+        "steps": 3,
+        "result": "Alice Smith (Customer ID: US-991) has one active order:\n\n- **Order ID:** ORD-123  \n- **Placed:** 2 days ago  \n- **Item:** Deluxe Sneakers  \n- **Cost:** $120.00  \n- **Carrier:** FedEx  \n- **Current Status:** Shipped  \n- **Cancellation Eligible:** Yes  \n\nLet me know if you\u2019d like to take any further action on this order (e.g., request a cancellation, update shipping details, etc.).",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_20804",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.171777725219727,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": true,
+        "steps": 4,
+        "result": "Your order ORD-123 has been shipped via FedEx. The tracking number is **123456789012**. You can track your package here: https://www.fedex.com/fedextrack/?tracknumbers=123456789012. If you have any further questions, feel free to let us know!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": true,
+        "steps": 8,
+        "result": "Your order ORD-123 has been shipped via FedEx and is currently marked as \"Shipped.\" Detailed tracking updates can be viewed on the FedEx website using the tracking number sent to you in the shipping confirmation email. If you have any further questions, feel free to let us know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_20804",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 6,
+          "recovery_count": 2,
+          "failure_types_seen": [
+            "step_repetition_loop"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 30.50878643989563,
+          "adherence_history": [
+            0.9928800582885742,
+            0.9932355880737305,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": true,
+        "steps": 2,
+        "result": "Our return policy for shoes allows you to cancel an order and receive a full refund within 3 days of purchase. If you return the shoes after the 3\u2011day window, a 15% restocking fee will be applied to the refund.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": true,
+        "steps": 2,
+        "result": "Our return policy for shoes is as follows: Orders can be cancelled and fully refunded within\u202f3\u202fdays of purchase. After the 3\u2011day window, returns are accepted but are subject to a\u202f15%\u202frestocking fee. If you need to cancel or return a shoe purchase, please let us know within the appropriate timeframe.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_20804",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.074186086654663,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": true,
+        "steps": 3,
+        "result": "We\u2019re sorry to hear the shoes feel too tight. Our return policy for footwear is as follows:  \n\n- **If your order is less than 3\u202fdays old**, you can cancel it and receive a full refund.  \n- **If more than 3\u202fdays have passed**, you may still return the shoes, but a 15\u202f% restocking fee will be applied to the refund.  \n\nTo start a return, please let us know your order number, and we\u2019ll guide you through the next steps. If you need any further assistance, feel free to reach out!",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": true,
+        "steps": 2,
+        "result": "Our return policy allows you to return shoes that are too tight. If your purchase is within 3 days, you can cancel the order for a full refund. For returns after 3 days, a 15% restocking fee will be applied to the refund. To start a return, please contact our support team with your order number, and we\u2019ll guide you through the process.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_20804",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.32861590385437,
+          "adherence_history": []
+        }
+      }
+    }
+  ]
+}

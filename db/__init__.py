@@ -1,0 +1,1 @@
+# GHOST database package

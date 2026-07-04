@@ -1,0 +1,1 @@
+# GHOST API routes package.

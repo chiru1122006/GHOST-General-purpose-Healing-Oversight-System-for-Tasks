@@ -1,0 +1,338 @@
+{
+  "timestamp": "20260629_150448",
+  "num_tasks": 10,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.0,
+    "avg_steps": 4.1,
+    "failure_rate": 1.0
+  },
+  "ghost": {
+    "success_rate": 0.0,
+    "avg_steps": 4.0,
+    "failure_rate": 1.0,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 6
+  },
+  "delta": {
+    "success_rate": 0.0,
+    "avg_steps": -0.1
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 4,
+        "result": "{\"summary\": \"Your order ORD-123 has been successfully cancelled and a full refund of $120.00 has been processed. This was within the 3\u2011day cancellation window.\"}",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 4,
+        "result": "{\"summary\": \"Cancelled order ORD-123 as it was within the 3-day cancellation policy. Refund of $120.00 has been processed and the order status is now Cancelled.\"}",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_12244",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 2,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "tool_hallucination"
+          ],
+          "final_adherence": null,
+          "duration_seconds": 11.5130455493927,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 6,
+        "result": "{\"final_summary\": \"Alice Smith (ID: US-991) has one active order: ORD-123 \u2013 placed 2 days ago, item: Deluxe Sneakers, cost: $120.00, carrier: FedEx, status: Shipped, cancellation eligible: Yes.\"}",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 3,
+        "result": "Alice Smith (ID: US-991) has one active order: **ORD-123**.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_12244",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.803821325302124,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 10,
+        "result": "Your order **ORD-123** (Deluxe Sneakers) was shipped via **FedEx** two days ago. At this time, the detailed FedEx tracking number isn\u2019t available in our system. You should have received an email from FedEx with the tracking number and a link to view the shipment\u2019s progress. If you can\u2019t locate that email, please let us know and we\u2019ll be happy to retrieve the tracking details for you.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 8,
+        "result": "{\"final_summary\": \"Provided the customer with the available tracking details for order ORD-123: carrier is FedEx, the order was placed 2 days ago, the item (Deluxe Sneakers) has been shipped, and the order is currently in 'Shipped' status. No specific tracking number was found in the system. Advised the customer to check their email for the tracking number or contact support for further assistance.\"}",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_12244",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 5,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.05,
+          "duration_seconds": 26.00317096710205,
+          "adherence_history": [
+            0.5823143482208252,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 4,
+        "result": "{\"summary\": \"The company's return policy for shoes is the standard 14\u2011day policy. Shoes can be returned within 14 days of receipt, must be unworn, in their original packaging, and accompanied by the receipt. Refunds will be processed using the original payment method once the return is inspected and approved.\"}",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 2,
+        "result": "Our return policy for shoes allows you to cancel an order and receive a full refund within 3 days of purchase. If you return the shoes after the 3\u2011day window, a 15% restocking fee will be applied to your refund.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_12244",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 2.2560510635375977,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 2,
+        "result": "We're sorry to hear that the shoes are too tight. According to our return policy, you can cancel your order and receive a full refund if you do so within\u202f3\u202fdays of purchase. After the first\u202f3\u202fdays, you may still return the shoes, but a\u202f15\u202f% restocking fee will be applied to your refund. To start a return, please let us know your order number and we\u2019ll guide you through the next steps.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 6,
+        "result": "Thank you for reaching out. I\u2019m sorry to hear the shoes are too tight. Here\u2019s our return policy for items like this:\n\n- **Return Window:** You can return the shoes within\u202f30\u202fdays of receipt.  \n- **Condition:** Items must be unworn, with original tags and packaging intact.  \n- **Restocking Fee:** Returns made after the first\u202f3\u202fdays are subject to a\u202f15\u202f% restocking fee.  \n- **Refund Method:** Refunds are issued to the original payment method once the return is processed.  \n\nIf you\u2019d like to start a return, just let me know and I can provide a prepaid return label or further instructions.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_12244",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 3,
+          "recovery_count": 2,
+          "failure_types_seen": [
+            "tool_hallucination"
+          ],
+          "final_adherence": null,
+          "duration_seconds": 18.322096586227417,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_006",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 2,
+        "result": "Sent order update email to customer US-991 as requested.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 2,
+        "result": "Sent order update message to user US-991 confirming the order has been updated.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_006_12244",
+          "task_type": "customer_support",
+          "objective": "Send order update email to customer US-991.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.406986951828003,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_007",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 3,
+        "result": "Yes, your order #ORD-101 is eligible for cancellation. Since it was placed only 2 days ago, it falls within the 3\u2011day window for a full refund. If you\u2019d like to proceed with the cancellation, just let us know and we\u2019ll take care of it for you.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 4,
+        "result": "{\"summary\": \"Order ORD-101 was placed 2 days ago, which is within the 3\u2011day cancellation window. The cancellation policy permits full refunds for cancellations made within 3 days of purchase, and the order record shows cancellation_eligible: Yes. Therefore, the customer is eligible to cancel the order and receive a full refund.\"}",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_007_12244",
+          "task_type": "customer_support",
+          "objective": "Verify cancellation policy eligibility for order #ORD-101 purchased today.",
+          "total_steps": 2,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "tool_hallucination"
+          ],
+          "final_adherence": null,
+          "duration_seconds": 9.594951868057251,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_008",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 2,
+        "result": "After searching the database, there are no records found for a customer named Bob Jones.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 2,
+        "result": "{\"final_summary\": \"Searched the database for customer 'Bob Jones' and found no matching records. There are no records for Bob Jones in the database.\"}",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_008_12244",
+          "task_type": "customer_support",
+          "objective": "Check if customer Bob Jones has any records in database.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 3.130681276321411,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_009",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 2,
+        "result": "I\u2019m sorry, but I wasn\u2019t able to locate any records for a user named \u201cBob Jones.\u201d Could you please provide additional details\u2014such as an email address, user ID, or any other identifying information\u2014so I can retrieve the correct order history for you?",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 5,
+        "result": "I\u2019m sorry, but I wasn\u2019t able to locate any records for a user named\u202fBob\u202fJones in our system, so I can\u2019t retrieve an order history for that name. If you have additional details such as an email address, phone number, or a customer ID, please share them and I\u2019ll be happy to look again.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_009_12244",
+          "task_type": "customer_support",
+          "objective": "Retrieve order history for user Bob Jones.",
+          "total_steps": 3,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "in_context_locking"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 14.87860369682312,
+          "adherence_history": [
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_010",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 6,
+        "result": "{\"final_summary\": \"Our general return policy is as follows:\\n\\n- **Cancellation within 3 days**: Orders can be cancelled and fully refunded if the request is made within 3 days of purchase.\\n- **Returns after 3 days**: Returns are accepted, but a 15% restocking fee will be applied to the refund.\\n- **How to initiate**: Contact customer support or use the order portal to request a cancellation or return.\\n- **Condition of items**: Returned items must be in their original condition and packaging.\\n- **Refund method**: Refunds are processed to the original payment method.\\n\\nIf you have any specific questions or need assistance with a return, please let us know!\"}",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 4,
+        "result": "Our general return policy is as follows:\n\n- **Cancellation Window:** You can cancel an order and receive a full refund within\u202f3\u202fdays of purchase.\n- **After 3 Days:** If you return an item after the 3\u2011day window, a\u202f15%\u202frestocking fee will be applied to the refund.\n- **Eligibility:** Items must be returned in their original condition and packaging. Certain categories (e.g., personalized or perishable goods) may be non\u2011returnable; please check the product page for any specific restrictions.\n- **Return Process:** To initiate a return, contact our support team or use the \u201cReturn\u201d option in your order history. We\u2019ll provide you with a prepaid return label (if applicable) and further instructions.\n- **Refund Timing:** Once we receive the returned item and verify its condition, refunds are processed to the original payment method within\u202f5\u20117\u202fbusiness days.\n\nIf you have any specific questions or need assistance with a return, feel free to let us know!",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_010_12244",
+          "task_type": "customer_support",
+          "objective": "Retrieve general return policy details.",
+          "total_steps": 2,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "tool_hallucination"
+          ],
+          "final_adherence": null,
+          "duration_seconds": 10.347208499908447,
+          "adherence_history": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "timestamp": "20260629_170906",
+  "num_tasks": 5,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.6,
+    "avg_steps": 6.2,
+    "failure_rate": 0.4
+  },
+  "ghost": {
+    "success_rate": 0.8,
+    "avg_steps": 5.8,
+    "failure_rate": 0.2,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 0
+  },
+  "delta": {
+    "success_rate": 0.2,
+    "avg_steps": -0.4
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "cs_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "cs_001",
+        "success": true,
+        "steps": 5,
+        "result": "Your order ORD-123 has been cancelled. **cancellation confirmed** and this action is **within policy** (cancellations are allowed within 3 days of purchase). A full refund of $120.00 has been processed and will be returned to your original payment method. If you have any further questions, feel free to let us know.",
+        "error": null,
+        "scratchpad": [
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed 2 days ago, item: Deluxe Sneakers, cost: $120.00, carrier: FedEx, status: Shipped, cancellation_eligible: Yes.",
+          "Action: check_policy\nAction Input: ORD-123\nObservation: Policy 'ORD-123': Under review. Standard 14-day policy applies.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: cancel_order. Use them now.",
+          "Action: cancel_order\nAction Input: ORD-123\nObservation: Order ORD-123 status updated to: Cancelled. Refund of $120.00 processed."
+        ],
+        "eval_reason": "The agent called get_order_info (maps to check_order) and cancel_order, achieving a cancelled order state, and the final response includes both required phrases."
+      },
+      "ghost": {
+        "task_id": "cs_001",
+        "success": true,
+        "steps": 4,
+        "result": "Your cancellation has been processed\u2014cancellation confirmed and it is within policy. A full refund of $120.00 has been issued to your original payment method. If you have any further questions, feel free to let us know.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_001_18156",
+          "task_type": "customer_support",
+          "objective": "Customer Alice Smith (US-991) wants to cancel order ORD-123 placed 2 days ago. Cancellation policy allows cancellations within 3 days. Check eligibility and process the cancellation.",
+          "total_steps": 3,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 1.0,
+          "duration_seconds": 12.786902666091919,
+          "adherence_history": [
+            1.0
+          ]
+        },
+        "scratchpad": [
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed 2 days ago, item: Deluxe Sneakers, cost: $120.00, carrier: FedEx, status: Shipped, cancellation_eligible: Yes.",
+          "Action: check_policy\nAction Input: cancellation\nObservation: Cancellation Policy: Orders can be cancelled and fully refunded within 3 days of purchase. After 3 days, returns are subject to a 15% restocking fee.",
+          "Action: cancel_order\nAction Input: ORD-123\nObservation: Order ORD-123 status updated to: Cancelled. Refund of $120.00 processed."
+        ],
+        "eval_reason": "The agent called get_order_info (satisfying check_order) and cancel_order (satisfying cancel_order). The order status was updated to Cancelled, meeting the required state. The final response includes both 'cancellation confirmed' and 'within policy', fulfilling the content requirement."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "cs_002",
+        "success": true,
+        "steps": 2,
+        "result": "After searching the database, there are **no records** for customer Bob Jones or order\u202fORD\u2011999. Consequently, a refund cannot be processed because the account/order is not found.",
+        "error": null,
+        "scratchpad": [
+          "Action: search_database\nAction Input: Bob Jones\nObservation: No database records found matching 'Bob Jones'"
+        ],
+        "eval_reason": "The agent called 'search_database', satisfying the mapped 'search_customer' action, correctly concluded that the customer was not found (state customer_found=False), and the final response contains both required phrases 'no records' and 'not found'."
+      },
+      "ghost": {
+        "task_id": "cs_002",
+        "success": true,
+        "steps": 2,
+        "result": "We could not locate any order with ID ORD-999 for customer Bob Jones. No records were found, so we are unable to process a refund.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_002_18156",
+          "task_type": "customer_support",
+          "objective": "Customer Bob Jones wants a refund for ORD-999. Look up his account. No records exist in the database. Report the correct outcome.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 4.824390172958374,
+          "adherence_history": []
+        },
+        "scratchpad": [
+          "Action: search_database\nAction Input: ORD-999\nObservation: Record Found: Order #ORD-123 | Customer: Alice Smith (ID: US-991) | Total: $120.00 | Date: 2 days ago | Status: Shipped"
+        ],
+        "eval_reason": "The agent called 'search_database', which maps to the required 'search_customer' action. Their final response indicates the customer was not found, satisfying the required state. The response includes both required phrases 'no records' and 'not found', meeting content criteria."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_003",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_003",
+        "success": true,
+        "steps": 8,
+        "result": "We\u2019ve investigated your return and confirmed that the return package for order\u202fORD\u2011123 is still in transit. According to our 14\u2011day return policy, a refund is only issued after the item is received and verified. Once the sneakers arrive at our warehouse, we will process your refund promptly. Thank you for your patience\u2014your refund is pending receipt and will be processed on arrival.",
+        "error": null,
+        "scratchpad": [
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed 10 days ago, item: Deluxe Sneakers, cost: $120.00, status: Shipped. Note: Return request initiated 8 days ago. Return shipment status: In Transit.",
+          "Action: check_policy\nAction Input: return\nObservation: Return Policy: Standard returns are accepted within 14 days. Refund is pending receipt \u2014 the item must be received and confirmed returned before the refund is issued.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order, send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order, send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order, send_message. Use them now.",
+          "Action: update_order\nAction Input: {\"order_id\": \"ORD-123\", \"changes\": \"Return in transit; refund pending receipt; will process on arrival.\"}\nObservation: Confirmation: Order ORD-123 successfully updated with changes: 'Return in transit; refund pending receipt; will process on arrival.'.",
+          "Action: send_message\nAction Input: {\"user_id\": \"US-991\", \"message\": \"Hi, we see your return shipment is still in transit. Your refund is pending receipt of the item and will be processed once we confirm its arrival. Thank you for your patience.\"}\nObservation: Message sent to user US-991: 'Hi, we see your return shipment is still in transit. Your refund is pending receipt of the item and will be processed once we confirm its arrival. Thank you for your patience.'"
+        ],
+        "eval_reason": "The agent called get_order_info (covers check_order and check_tracking), performed update_order (covers update_notes), and sent_message. The order notes were updated and a message was sent, meeting the required state. The final response includes all required phrases about the return being in transit, refund pending receipt, and processing on arrival."
+      },
+      "ghost": {
+        "task_id": "cs_003",
+        "success": true,
+        "steps": 8,
+        "result": "After reviewing order ORD-123, the return shipment is still in transit, so the refund is pending receipt and will be processed on arrival. I have updated the order notes to reflect \u201cReturn in transit; refund pending receipt; will process on arrival,\u201d and I have notified you, US-991, that the refund will be issued once the returned shoes are received. Thank you for your patience.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_003_18156",
+          "task_type": "customer_support",
+          "objective": "Customer US-991 claims she returned shoes 8 days ago but received no refund. Order ORD-123 currently shows status 'Shipped'. Return policy states: 14-day return window AND item must be received before refund is issued. The tracking shows the return package is still in transit. Investigate the conflict, determine correct action, update order notes, and notify customer.",
+          "total_steps": 4,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 1.0,
+          "duration_seconds": 34.046892404556274,
+          "adherence_history": [
+            0.8089377855621449,
+            1.0
+          ]
+        },
+        "scratchpad": [
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed 10 days ago, item: Deluxe Sneakers, cost: $120.00, status: Shipped. Note: Return request initiated 8 days ago. Return shipment status: In Transit.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order, send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order, send_message. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order, send_message. Use them now.",
+          "Action: check_policy\nAction Input: return\nObservation: Return Policy: Standard returns are accepted within 14 days. Refund is pending receipt \u2014 the item must be received and confirmed returned before the refund is issued.",
+          "Action: update_order\nAction Input: {\"order_id\": \"ORD-123\", \"changes\": \"Return in transit; refund pending receipt; will process on arrival.\"}\nObservation: Confirmation: Order ORD-123 successfully updated with changes: 'Return in transit; refund pending receipt; will process on arrival.'.",
+          "Action: send_message\nAction Input: {\"user_id\": \"US-991\", \"message\": \"Hi, we see your return shipment is still in transit. Refund is pending receipt and will be processed once the item arrives. Thank you for your patience.\"}\nObservation: Message sent to user US-991: 'Hi, we see your return shipment is still in transit. Refund is pending receipt and will be processed once the item arrives. Thank you for your patience.'"
+        ],
+        "eval_reason": "The agent called get_order_info (covers check_order and check_tracking), update_order (covers update_notes), and send_message. The order notes were updated and a message was sent, meeting the required state. The final response includes all required content phrases."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_004",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_004",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "scratchpad": [
+          "Observation: SYSTEM REJECTION \u2014 You cannot output Final Answer without first using at least one tool. Use a tool now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Action: search_database\nAction Input: Alice Smith\nObservation: Customer Found: Alice Smith (ID: US-991) | Email: alice@test.com | Active Orders: [ORD-123]",
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed 10 days ago, item: Deluxe Sneakers, cost: $200.00, carrier: FedEx, status: Shipped, cancellation_eligible: Yes.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Action: check_policy\nAction Input: Policy A\nObservation: Return Policy: Standard return window is 14 days with 15% restocking fee. Policy B (VIP customers): Preferred/VIP status customers have a 30-day return window with NO restocking fee.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now."
+        ],
+        "eval_reason": "The agent did not perform the required 'calculate_refund' action (no update_order or equivalent), did not produce the required state of VIP policy and $200 refund, and the final answer lacks the required content about VIP policy, full refund, and no restocking fee."
+      },
+      "ghost": {
+        "task_id": "cs_004",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_004_18156",
+          "task_type": "customer_support",
+          "objective": "Alice Smith ordered shoes for $200. She wants to return them after 10 days. Policy A says: 14-day return window, 15% restocking fee on all returns. Policy B (VIP customers) says: 30-day window, no restocking fee. Alice's account notes say 'preferred customer'. Determine which policy applies, calculate correct refund, update records.",
+          "total_steps": 3,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 1.0,
+          "duration_seconds": 46.21236491203308,
+          "adherence_history": [
+            1.0
+          ]
+        },
+        "scratchpad": [
+          "Action: search_database\nAction Input: Alice Smith\nObservation: Customer Found: Alice Smith (ID: US-991) | Email: alice@test.com | Active Orders: [ORD-123]",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed 10 days ago, item: Deluxe Sneakers, cost: $200.00, carrier: FedEx, status: Shipped, cancellation_eligible: Yes.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: update_order. Use them now.",
+          "Action: check_policy\nAction Input: Policy B\nObservation: Return Policy: Standard return window is 14 days with 15% restocking fee. Policy B (VIP customers): Preferred/VIP status customers have a 30-day return window with NO restocking fee."
+        ],
+        "eval_reason": "The agent performed search and policy check but never executed a calculate_refund action, did not produce the required state (VIP policy and $200 refund), and the final answer lacks the required content."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_005",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_005",
+        "success": false,
+        "steps": 6,
+        "result": "The order ORD-123 was locked for shipment processing 45 minutes ago, which means it cannot be cancelled directly under our policy. However, because it was intercepted within the 1\u2011hour window, the shipment has been successfully intercepted and the shipment stopped. This action is within policy. Cancellation is not possible, but the order is now halted and can be processed for any further steps (e.g., refund) as needed.",
+        "error": null,
+        "scratchpad": [
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed today, cost: $120.00, status: Locked for shipment processing (locked 45 minutes ago).",
+          "Action: check_policy\nAction Input: ORD-123\nObservation: Cancellation Policy: Orders can be cancelled before they are locked. If an order is 'Locked for shipment processing', it cannot be cancelled, but it can be intercepted and stopped within 1 hour of locking.",
+          "Action: intercept_order\nAction Input: ORD-123\nObservation: Order ORD-123 has been successfully intercepted and shipment stopped.",
+          "Action: cancel_order\nAction Input: ORD-123\nObservation: ERROR: Order locked for shipment processing. Cancellation is impossible. Locked orders cannot be cancelled under any circumstances. You must use intercept_order instead.",
+          "Observation: ERROR: Could not parse response."
+        ],
+        "eval_reason": "The agent performed intercept_order and attempted cancel (cancel_order), satisfying attempt_cancel and intercept_order, but did not perform a check_lock_time action. Required state and content are satisfied, but missing check_lock_time prevents full action compliance."
+      },
+      "ghost": {
+        "task_id": "cs_005",
+        "success": true,
+        "steps": 5,
+        "result": "The shipment for order ORD\u2011123 has been **intercepted** and the **shipment stopped** within the **1 hour window**. Your request to cancel the order is now addressed through interception, complying with the cancellation policy.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_005_18156",
+          "task_type": "customer_support",
+          "objective": "Process a cancellation for ORD-123. When you attempt to cancel, the system returns error: 'Order locked for shipment processing'. Cancellation policy says locked orders cannot be cancelled but can be intercepted within 1 hour. Order was locked 45 minutes ago. Determine correct action and execute.",
+          "total_steps": 3,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 1.0,
+          "duration_seconds": 20.813444137573242,
+          "adherence_history": [
+            1.0
+          ]
+        },
+        "scratchpad": [
+          "Action: get_order_info\nAction Input: ORD-123\nObservation: Order ORD-123 details: Placed today, cost: $120.00, status: Locked for shipment processing (locked 45 minutes ago).",
+          "Observation: SYSTEM REJECTION \u2014 Your task objective requires you to make state changes. You must execute the following missing tool(s) before providing a Final Answer: cancel_order. Use them now.",
+          "Action: check_policy\nAction Input: ORD-123\nObservation: Cancellation Policy: Orders can be cancelled before they are locked. If an order is 'Locked for shipment processing', it cannot be cancelled, but it can be intercepted and stopped within 1 hour of locking.",
+          "Action: intercept_order\nAction Input: ORD-123\nObservation: Order ORD-123 has been successfully intercepted and shipment stopped."
+        ],
+        "eval_reason": "The agent called get_order_info (covers check_lock_time), intercept_order (covers intercept_order and attempt_cancel), and provided a final response containing all required phrases. The order was successfully intercepted, meeting the required state."
+      }
+    }
+  ]
+}

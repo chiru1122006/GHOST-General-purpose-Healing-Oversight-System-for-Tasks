@@ -1,0 +1,359 @@
+{
+  "timestamp": "20260629_133810",
+  "num_tasks": 10,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.0,
+    "avg_steps": 7.0,
+    "failure_rate": 1.0
+  },
+  "ghost": {
+    "success_rate": 0.1,
+    "avg_steps": 6.0,
+    "failure_rate": 0.9,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 4
+  },
+  "delta": {
+    "success_rate": 0.1,
+    "avg_steps": -1.0
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "task_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 5,
+        "result": "Your order #ORD-123 has been successfully cancelled. A full refund of $120.00 has been processed.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_001",
+        "success": false,
+        "steps": 5,
+        "result": "Your order #ORD-123 has been successfully cancelled. A full refund of $120.00 has been processed.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_001_19228",
+          "task_type": "customer_support",
+          "objective": "Customer wants to cancel order #ORD-123 placed 2 days ago. Check if it's within the 3-day cancellation policy and process accordingly.",
+          "total_steps": 4,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.37000432014465334,
+          "duration_seconds": 38.03825664520264,
+          "adherence_history": [
+            0.43005771636962886,
+            0.37000432014465334
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 6,
+        "result": "Your active order, ORD-123, has been located and its status is 'Shipped'. If you need any further assistance, please let us know.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_002",
+        "success": false,
+        "steps": 6,
+        "result": "Your active order is ORD-123 for Deluxe Sneakers, which has been shipped via FedEx. If you need any further assistance, please let us know.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_002_19228",
+          "task_type": "customer_support",
+          "objective": "Search database for Alice Smith (ID: US-991) and report her active orders.",
+          "total_steps": 5,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.36473142623901367,
+          "duration_seconds": 39.65958285331726,
+          "adherence_history": [
+            0.36473142623901367
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_003",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 8,
+        "result": "The detailed tracking information for your order ORD-123 is not available in our system. However, you can track your order directly on the FedEx website using the tracking number provided in your order details. If you have any further questions or concerns, please reply to this message.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_003",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_003_19228",
+          "task_type": "customer_support",
+          "objective": "Get detailed tracking info for order ORD-123.",
+          "total_steps": 10,
+          "recovery_count": 2,
+          "failure_types_seen": [
+            "step_repetition_loop"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 387.395836353302,
+          "adherence_history": [
+            0.7147790431976317,
+            0.7258778572082519,
+            0.05,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_004",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 4,
+        "result": "Our company's return policy for shoes allows for a full refund within 3 days of purchase. After 3 days, returns are subject to a 15% restocking fee.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_004",
+        "success": false,
+        "steps": 2,
+        "result": "Our company's return policy for shoes allows for a full refund if the order is cancelled within 3 days of purchase. After 3 days, returns are subject to a 15% restocking fee.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_004_19228",
+          "task_type": "customer_support",
+          "objective": "Look up company return policy for shoes.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 19.896780729293823,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_005",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout"
+      },
+      "ghost": {
+        "task_id": "task_005",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_005_19228",
+          "task_type": "customer_support",
+          "objective": "Customer complains about shoes being too tight. Provide return policy information.",
+          "total_steps": 10,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.05,
+          "duration_seconds": 155.26657271385193,
+          "adherence_history": [
+            0.5960557937622071,
+            0.5943959474563598,
+            0.6139408588409424,
+            0.8038876506023198,
+            0.8068215608596802,
+            0.697906551361084,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_006",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 4,
+        "result": "The customer US-991 has been informed about the order update and the shipping details of their order ORD-123. No further action is required at this time.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_006",
+        "success": false,
+        "steps": 5,
+        "result": "The customer US-991 has been informed about the order update and shipment details. The customer support team is also available to address any questions or concerns they may have.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_006_19228",
+          "task_type": "customer_support",
+          "objective": "Send order update email to customer US-991.",
+          "total_steps": 4,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": 0.05,
+          "duration_seconds": 105.33660840988159,
+          "adherence_history": [
+            0.7008565664291382,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_007",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout"
+      },
+      "ghost": {
+        "task_id": "task_007",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout",
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_007_19228",
+          "task_type": "customer_support",
+          "objective": "Verify cancellation policy eligibility for order #ORD-101 purchased today.",
+          "total_steps": 10,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "in_context_locking"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 196.66714072227478,
+          "adherence_history": [
+            0.5862500190734863,
+            0.8054434299468993,
+            0.8034230470657349,
+            0.05,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_008",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 10,
+        "result": "Max iterations reached.",
+        "error": "Timeout"
+      },
+      "ghost": {
+        "task_id": "task_008",
+        "success": false,
+        "steps": 7,
+        "result": "I apologize, but it seems like we've tried various approaches to find your records in our database, and unfortunately, we couldn't find a match. Could you please provide more information or clarify your name or any other details that might help us assist you better?",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_008_19228",
+          "task_type": "customer_support",
+          "objective": "Check if customer Bob Jones has any records in database.",
+          "total_steps": 6,
+          "recovery_count": 1,
+          "failure_types_seen": [
+            "in_context_locking"
+          ],
+          "final_adherence": 0.05,
+          "duration_seconds": 78.33508133888245,
+          "adherence_history": [
+            0.05,
+            0.05
+          ]
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_009",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_009",
+        "success": false,
+        "steps": 8,
+        "result": "I apologize, but we've tried various methods to locate your order history, and unfortunately, we were unable to find any matching records. As previously mentioned, please contact our customer support directly at [support phone number] or [support email] so we can assist you further with your query.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_009",
+        "success": true,
+        "steps": 3,
+        "result": "I apologize, but we couldn't find any records matching your name in our database. Could you please provide more information about your account, such as your email address or phone number associated with your orders, so we can try to locate your order history?",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_009_19228",
+          "task_type": "customer_support",
+          "objective": "Retrieve order history for user Bob Jones.",
+          "total_steps": 2,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 91.08761286735535,
+          "adherence_history": []
+        }
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "task_010",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 5,
+        "result": "Our general return policy allows for full refunds within 3 days of purchase. After 3 days, returns are subject to a 15% restocking fee.",
+        "error": null
+      },
+      "ghost": {
+        "task_id": "task_010",
+        "success": false,
+        "steps": 2,
+        "result": "Our return policy allows for full refunds within 3 days of purchase. After 3 days, returns are subject to a 15% restocking fee. If you'd like to initiate a return or have any further questions, please let me know and I'll be happy to assist you.",
+        "error": null,
+        "ghost_summary": {
+          "session_id": "bench_ghost_task_010_19228",
+          "task_type": "customer_support",
+          "objective": "Retrieve general return policy details.",
+          "total_steps": 1,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 30.696730375289917,
+          "adherence_history": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "timestamp": "20260629_173418",
+  "num_tasks": 5,
+  "num_runs": 1,
+  "baseline": {
+    "success_rate": 0.0,
+    "avg_steps": 1.0,
+    "failure_rate": 1.0
+  },
+  "ghost": {
+    "success_rate": 0.0,
+    "avg_steps": 1.0,
+    "failure_rate": 1.0,
+    "recovery_success_rate": 0.0,
+    "total_drift_detections": 0
+  },
+  "delta": {
+    "success_rate": 0.0,
+    "avg_steps": 0.0
+  },
+  "task_level_results": [
+    {
+      "run": 1,
+      "task_id": "cs_001",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "cs_001",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "eval_reason": "The agent provided only 'Execution error' with no tool calls, state changes, or required content. Required actions (check_order, cancel_order) were not performed, the order status was not set to cancelled, and the response lacks the required phrases."
+      },
+      "ghost": {
+        "task_id": "cs_001",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_001_13804",
+          "task_type": "customer_support",
+          "objective": "Customer Alice Smith (US-991) wants to cancel order ORD-123 placed 2 days ago. Cancellation policy allows cancellations within 3 days. Check eligibility and process the cancellation.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 0.9501941204071045,
+          "adherence_history": []
+        },
+        "eval_reason": "The agent provided only 'Execution error' with no tool calls, state changes, or required content. Required actions (check_order, cancel_order) were not performed, the order status was not set to cancelled, and the response lacks the mandated phrases."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_002",
+      "difficulty": "easy",
+      "baseline": {
+        "task_id": "cs_002",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "eval_reason": "The agent did not perform the required 'search_customer' action (no tool calls are shown), did not achieve the state indicating the customer was not found, and the final response 'Execution error.' lacks the required content phrases 'no records' or 'not found'."
+      },
+      "ghost": {
+        "task_id": "cs_002",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_002_13804",
+          "task_type": "customer_support",
+          "objective": "Customer Bob Jones wants a refund for ORD-999. Look up his account. No records exist in the database. Report the correct outcome.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 0.36917996406555176,
+          "adherence_history": []
+        },
+        "eval_reason": "The agent did not call any tool equivalent to 'search_customer', did not indicate that the customer was not found, and the final response lacks the required phrases 'no records' or 'not found'."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_003",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_003",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "eval_reason": "The agent's response is just 'Execution error' with no tool calls, no order notes update, no message sent, and none of the required content phrases are present, so none of the required actions, states, or content are satisfied."
+      },
+      "ghost": {
+        "task_id": "cs_003",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_003_13804",
+          "task_type": "customer_support",
+          "objective": "Customer US-991 claims she returned shoes 8 days ago but received no refund. Order ORD-123 currently shows status 'Shipped'. Return policy states: 14-day return window AND item must be received before refund is issued. The tracking shows the return package is still in transit. Investigate the conflict, determine correct action, update order notes, and notify customer.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 0.3324596881866455,
+          "adherence_history": []
+        },
+        "eval_reason": "The agent's final response is merely 'Execution error' and contains no evidence of performing the required actions, updating order notes, sending a message, or including the mandated content about the return being in transit, refund pending receipt, and processing upon arrival."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_004",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_004",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "eval_reason": "The agent provided no tool calls or reasoning steps, did not determine or apply any policy, did not calculate a refund, and the final response contains only 'Execution error' without the required content."
+      },
+      "ghost": {
+        "task_id": "cs_004",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_004_13804",
+          "task_type": "customer_support",
+          "objective": "Alice Smith ordered shoes for $200. She wants to return them after 10 days. Policy A says: 14-day return window, 15% restocking fee on all returns. Policy B (VIP customers) says: 30-day window, no restocking fee. Alice's account notes say 'preferred customer'. Determine which policy applies, calculate correct refund, update records.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 0.30173397064208984,
+          "adherence_history": []
+        },
+        "eval_reason": "The agent provided only an 'Execution error' response with no tool calls, reasoning, or content addressing the policies, refund calculation, or required actions, thus failing all criteria."
+      }
+    },
+    {
+      "run": 1,
+      "task_id": "cs_005",
+      "difficulty": "medium",
+      "baseline": {
+        "task_id": "cs_005",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "eval_reason": "The agent provided only 'Execution error' with no tool calls or reasoning, failing to perform the required actions, achieve the required state, and include the necessary content."
+      },
+      "ghost": {
+        "task_id": "cs_005",
+        "success": false,
+        "steps": 1,
+        "result": "Execution error.",
+        "error": "'\"key\"'",
+        "ghost_summary": {
+          "session_id": "bench_ghost_cs_005_13804",
+          "task_type": "customer_support",
+          "objective": "Process a cancellation for ORD-123. When you attempt to cancel, the system returns error: 'Order locked for shipment processing'. Cancellation policy says locked orders cannot be cancelled but can be intercepted within 1 hour. Order was locked 45 minutes ago. Determine correct action and execute.",
+          "total_steps": 0,
+          "recovery_count": 0,
+          "failure_types_seen": [],
+          "final_adherence": null,
+          "duration_seconds": 0.3414032459259033,
+          "adherence_history": []
+        },
+        "eval_reason": "The agent provided only an 'Execution error' response and did not perform any of the required actions (attempt_cancel, check_lock_time, intercept_order), did not achieve the required state of order_intercepted=True, and did not include any of the required content in the final answer."
+      }
+    }
+  ]
+}
