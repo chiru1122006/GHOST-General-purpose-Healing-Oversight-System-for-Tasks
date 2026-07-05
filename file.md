@@ -1,0 +1,116 @@
+# Project File Structure
+
+- .env
+- .gitignore
+- README.md
+- STEP1_README.md
+- STEP2_README.md
+- STEP3_README.md
+- STEP4_README.md
+- STEP5_README.md
+- **api/**
+    - main.py
+    - **routes/**
+        - __init__.py
+        - sessions.py
+        - stats.py
+- **benchmarks/**
+    - baseline_agent.py
+    - evaluator.py
+    - ghost_agent.py
+    - llm_retry.py
+    - **results/**
+        - results_20260627_192836.json
+        - results_20260627_225838.json
+        - results_20260629_133810.json
+        - results_20260629_150448.json
+        - results_20260629_153542.json
+        - results_20260629_153926.json
+        - results_20260629_154631.json
+        - results_20260629_154914.json
+        - results_20260629_161226.json
+        - results_20260629_162013.json
+        - results_20260629_163247.json
+        - results_20260629_163639.json
+        - results_20260629_164120.json
+        - results_20260629_164551.json
+        - results_20260629_164851.json
+        - results_20260629_165928.json
+        - results_20260629_170440.json
+        - results_20260629_170906.json
+        - results_20260629_171533.json
+        - results_20260629_172116.json
+        - results_20260629_173418.json
+        - results_20260629_174044.json
+        - results_20260629_174257.json
+        - results_20260629_174621.json
+    - run_tau_bench.py
+    - tasks.py
+- **core/**
+    - __init__.py
+    - classifier.py
+    - interceptor.py
+    - memory.py
+    - recovery.py
+    - trajectory.py
+- **dashboard/**
+    - **app/**
+        - **components/**
+            - AdherenceChart.tsx
+            - FailureAlert.tsx
+            - RecoveryLog.tsx
+            - SessionTable.tsx
+            - StatsHeader.tsx
+        - globals.css
+        - layout.tsx
+        - page.tsx
+    - next-env.d.ts
+    - next.config.js
+    - package-lock.json
+    - package.json
+    - tsconfig.json
+- **db/**
+    - __init__.py
+    - **chroma/**
+        - **06a86c5b-ff68-4867-a007-878e40b325ab/**
+            - data_level0.bin
+            - header.bin
+            - length.bin
+            - link_lists.bin
+        - chroma.sqlite3
+    - ghost.db
+    - schema.py
+- **examples/**
+    - demo_simple.py
+- file.md
+- **ghost/**
+    - **api/**
+        - .gitkeep
+        - **routes/**
+            - .gitkeep
+    - **benchmarks/**
+        - .gitkeep
+        - **results/**
+            - .gitkeep
+        - run_benchmark.py
+    - **core/**
+        - .gitkeep
+    - **dashboard/**
+        - .gitkeep
+    - **db/**
+        - .gitkeep
+    - **examples/**
+        - .gitkeep
+    - **tests/**
+        - .gitkeep
+- requirements.txt
+- test_step1.py
+- test_step2.py
+- test_step3.py
+- test_step5.py
+- **tests/**
+    - conftest.py
+    - test_classifier.py
+    - test_interceptor.py
+    - test_recovery.py
+    - test_trajectory.py
